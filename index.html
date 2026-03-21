@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Madulika — Full Stack AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Oleo+Script:wght@400;700&family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur-r"></div>
+
+<!-- NAV -->
+<nav>
+  <img class="avatar" src="assets/svg/logo.svg" />
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-btn" id="thBtn">🌙</button>
+  </div>
+</nav>
+
+
+<!-- ============ HERO ============ -->
+<section id="home">
+  <div class="hero-arc" id="heroArc"></div>
+  <div class="hero-inner">
+
+    <div class="char-card rev-l">
+      <!-- Replace peep-hero.svg with your own SVG from assets/svg/ -->
+      <img class="avatar" src="assets/svg/peep-hero.svg" alt="Madulika illustration"/>
+
+      <div class="sicons">
+        <a href="https://wa.me/9345531330" target="_blank" class="si si-wa" title="WhatsApp">
+          <img src="assets/svg/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://github.com/madulika-prabu" target="_blank" class="si si-gh" title="GitHub">
+          <img src="assets/png/github.png" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/madulikaps" target="_blank" class="si si-li" title="LinkedIn">
+          <img src="assets/svg/linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="mailto:madulikaprabusankar@gmail.com" class="si si-gm" title="Gmail">
+          <img src="assets/png/gmail.png" alt="Gmail">
+        </a>
+        <a href="https://medium.com/@madulikaprabusankar" target="_blank" class="si si-md" title="Medium Blog">
+          <img src="assets/svg/medium.svg" alt="Medium">
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-txt rev">
+      <h1>Hey There, Its   <span class="cursive">Madulika</span></h1>
+      <p class="hero-sub">From backend logic to AI workflows, I turn ideas into live systems.</p>
+      <div class="ctas" style="margin-left: 110px;" >
+        <a href="#projects" class="btn btn-w">View Projects</a>
+        <a href="#contact" class="btn btn-o">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind"><span>Scroll</span><div class="scroll-arr"></div></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<!-- <section id="about">
+  <p class="sec-label rev">About Me</p>
+  <div class="comic rev">
+    <div class="cp photo">
+      <div class="photo-bg-el"></div>
+      <div class="photo-wrap">
+
+        <svg class="photo-circle" viewBox="0 0 190 190" style="border-radius:50%">
+          <circle cx="95" cy="95" r="95" fill="#1e1e3e"/>
+          <ellipse cx="95" cy="80" rx="30" ry="32" fill="#f3b98a"/>
+          <ellipse cx="95" cy="60" rx="24" ry="18" fill="#111"/>
+          <rect x="52" y="110" width="86" height="80" rx="14" fill="#111"/>
+          <text x="95" y="175" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="9" font-family="DM Sans,sans-serif">your photo here</text>
+        </svg>
+      </div>
+      <div class="photo-caption">
+        A self-taught full-stack AI engineer building meaningful digital products that balance user needs with business goals.
+        <em>B.Tech in Artificial Intelligence and Data Science</em>
+      </div>
+    </div>
+    <div class="cp dark" style="clip-path:polygon(0 0,100% 0,90% 100%,0 100%)">
+      <div><div style="font-size:28px;margin-bottom:8px">🧠</div><p>I build conversational AI systems that understand speech and text, not just keywords</p></div>
+    </div>
+    <div class="cp mid">
+      <div style="font-size:50px;display:flex;align-items:center;justify-content:center;height:100%">🤖</div>
+    </div>
+    <div class="cp dark">
+      <div><div style="font-size:28px;margin-bottom:8px">⚡</div><p>I use agentic AI to automate decision flows beyond static workflows.</p></div>
+    </div>
+    <div class="cp mid">
+      <div><div style="font-size:28px;margin-bottom:8px">🔧</div><p>I design and build scalable backend systems and APIs using Django, FastAPI, and modern system design.</p></div>
+    </div>
+    <div class="cp deep">
+      <div style="font-size:50px;display:flex;align-items:center;justify-content:center;height:100%">💻</div>
+    </div>
+    <div class="cp mid">
+      <div><div style="font-size:28px;margin-bottom:8px">📊</div><p>I use data science to explore data, find patterns, and guide intelligent decisions.</p></div>
+    </div>
+    <div class="cp dark">
+      <div><div style="font-size:28px;margin-bottom:8px">👁️</div><p>I build computer vision systems that run real-time inference in live environments.</p></div>
+    </div>
+    <div class="cp deep">
+      <div><div style="font-size:28px;margin-bottom:8px">🐳</div><p>I package AI services using Docker — portable, scalable, easy to deploy anywhere.</p></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <p class="sec-label rev">About Me</p>
+  <div class="comic-svg-wrap rev">
+    <img src="assets/svg/comic.svg" alt="About Me Comic" class="comic-svg"/>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <p class="sec-label rev">Work Experience</p>
+  <div class="exp-wrap">
+    <div class="exp-list">
+
+      <div class="ec on rev" data-i="0">
+        <div class="ec-icon">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="#2a2060"/>
+            <ellipse cx="18" cy="16" rx="9" ry="10" fill="#f3b98a"/>
+            <ellipse cx="18" cy="8" rx="7" ry="6" fill="#111"/>
+            <rect x="12" y="18" width="12" height="7" rx="2" fill="#111"/>
+            <rect x="10" y="15" rx="2" width="7" height="4" fill="#111"/>
+            <rect x="19" y="15" rx="2" width="7" height="4" fill="#111"/>
+          </svg>
+        </div>
+        <div class="ec-body">
+          <h3>Associate Engineer @Springfive</h3>
+          <p>Building enterprise workflows from design to deployment.</p>
+        </div>
+      </div>
+
+      <div class="ec rev" data-i="1" style="transition-delay:.08s">
+        <div class="ec-icon">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="#2a2060"/>
+            <ellipse cx="18" cy="16" rx="9" ry="10" fill="#f3b98a"/>
+            <ellipse cx="18" cy="8" rx="7" ry="6" fill="#111"/>
+            <rect x="12" y="18" width="12" height="7" rx="2" fill="#111"/>
+            <path d="M13 15 Q18 12 23 15" stroke="#111" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <div class="ec-body">
+          <h3>Intern @ Springfive</h3>
+          <p>Hands-on with real-world systems, not just learning curves.</p>
+        </div>
+      </div>
+
+      <div class="ec rev" data-i="2" style="transition-delay:.16s">
+        <div class="ec-icon">
+          <svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="18" fill="#2a2060"/>
+            <ellipse cx="18" cy="16" rx="9" ry="10" fill="#f3b98a"/>
+            <ellipse cx="18" cy="8" rx="7" ry="6" fill="#111"/>
+            <rect x="12" y="18" width="12" height="7" rx="2" fill="#333"/>
+            <circle cx="14" cy="15" r="3" fill="#111"/>
+            <circle cx="22" cy="15" r="3" fill="#111"/>
+            <circle cx="15" cy="14" r="1.2" fill="white"/>
+            <circle cx="23" cy="14" r="1.2" fill="white"/>
+          </svg>
+        </div>
+        <div class="ec-body">
+          <h3>AI Intern @NITT</h3>
+          <p>Building intelligent systems with a research-first mindset.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="exp-right">
+  <!-- <div class="exp-svg-wrap">
+    <img src="assets/svg/peep-experience.svg" alt="Experience Visual" class="exp-svg"/>
+  </div> -->
+  <div class="exp-canvas-wrap" id="expCanvas">
+    <svg id="techLines"></svg>
+  <!-- Orbit icons (floating gently) -->
+  <div class="orbit-system">
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+    <div class="orbit orbit-3"></div>
+
+    <!-- Orbit floating icons -->
+    <div class="oi" style="--a:0deg;   --r:180px; --d:0s">   <img src="assets/svg/orbitIcons/adobe.svg"></div>
+    <div class="oi" style="--a:45deg;  --r:180px; --d:.4s">  <img src="assets/svg/orbitIcons/ai.svg"></div>
+    <div class="oi" style="--a:90deg;  --r:180px; --d:.8s">  <img src="assets/svg/orbitIcons/bird.svg"></div>
+    <div class="oi" style="--a:135deg; --r:180px; --d:1.2s"> <img src="assets/svg/orbitIcons/css.svg"></div>
+    <div class="oi" style="--a:180deg; --r:180px; --d:1.6s"> <img src="assets/svg/orbitIcons/dev.svg"></div>
+    <div class="oi" style="--a:225deg; --r:180px; --d:2s">   <img src="assets/svg/orbitIcons/figma.svg"></div>
+    <div class="oi" style="--a:270deg; --r:180px; --d:2.4s"> <img src="assets/svg/orbitIcons/google.svg"></div>
+    <div class="oi" style="--a:315deg; --r:180px; --d:2.8s"> <img src="assets/svg/orbitIcons/js.svg"></div>
+    <div class="oi" style="--a:20deg;  --r:280px; --d:.2s">  <img src="assets/svg/orbitIcons/linkedin.svg"></div>
+    <div class="oi" style="--a:80deg;  --r:280px; --d:.6s">  <img src="assets/svg/orbitIcons/next.svg"></div>
+    <div class="oi" style="--a:160deg; --r:280px; --d:1s">   <img src="assets/svg/orbitIcons/react.svg"></div>
+    <div class="oi" style="--a:240deg; --r:280px; --d:1.4s"> <img src="assets/svg/orbitIcons/css.svg"></div>
+
+    <!-- Peep on bike in center -->
+    <div class="bike-center">
+      <div class="bike-glow"></div>
+      <img src="assets/svg/peep-bike.svg" class="bike-img" alt="peep on bike"/>
+    </div>
+  </div>
+
+  <!-- Tech icons top rows with lines -->
+  <div class="tech-rows">
+    <div class="tech-row">
+      <div class="ti"><img src="assets/svg/icons/tensorflow.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/huggingface.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/react.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/python.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/node.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/langchain.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/js.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/css.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/salesforce.svg"> </div>
+    </div>
+    <div class="tech-row">
+      <div class="ti"><img src="assets/svg/icons/langchain.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/django.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/next.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/n8n.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/jenkin.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/express.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/mongodb.svg"> </div>
+      <div class="ti"><img src="assets/svg/icons/git.svg"> </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Floating popup card -->
+  <div class="exp-popup" id="expPopup">
+    <div class="exp-popup-inner">
+      <h2 id="eTitle">Associate Engineer @ Springfive</h2>
+      <p class="per" id="ePer">Jul 2025 — Present</p>
+      <ul id="eBullets">
+        <li>Shipped RPA &amp; IDP automations to production</li>
+        <li>Delivered end-to-end Salesforce–MuleSoft integrations with CI/CD and UI components using LWC</li>
+        <li>Built APIs connecting Azure, Salesforce, and NetSuite</li>
+      </ul>
+      <div class="techs" id="eTech">
+        <span class="tpill">🌩️ Salesforce</span>
+        <span class="tpill">🔗 MuleSoft</span>
+        <span class="tpill">☁️ Azure</span>
+        <span class="tpill">⚙️ LWC</span>
+        <span class="tpill">🔄 CI/CD</span>
+      </div>
+      <div class="exp-popup-img">
+        <img src="assets/svg/peep-group.svg" alt="Team" class="peep-group-img"/>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <p class="sec-label rev">Projects</p>
+  <h2 class="rev" style="font-size:clamp(26px,3.2vw,42px);font-weight:700">Things I've Built</h2>
+  <div class="proj-grid">
+
+    <div class="pcard rev">
+      <p class="pn">01</p>
+      <h3>Conversational AI System</h3>
+      <p>Speech &amp; text AI that understands semantics, not just keywords — with real context awareness.</p>
+      <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">NLP</span><span class="ptag">Whisper</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Demo</a></div>
+    </div>
+
+    <div class="pcard rev" style="transition-delay:.08s">
+      <p class="pn">02</p>
+      <h3>Aquaponics ML Monitor</h3>
+      <p>ML models for fish &amp; plant health in aquaponics — built at NIT Trichy research internship.</p>
+      <div class="ptags"><span class="ptag">Computer Vision</span><span class="ptag">PyTorch</span><span class="ptag">IoT</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Demo</a></div>
+    </div>
+
+    <div class="pcard rev" style="transition-delay:.16s">
+      <p class="pn">03</p>
+      <h3>Agentic AI Workflow Engine</h3>
+      <p>MuleSoft + MCP agent that automates multi-step decision flows beyond static rule trees.</p>
+      <div class="ptags"><span class="ptag">MuleSoft</span><span class="ptag">MCP</span><span class="ptag">Agents</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Demo</a></div>
+    </div>
+
+    <div class="pcard rev" style="transition-delay:.24s">
+      <p class="pn">04</p>
+      <h3>Salesforce–NetSuite Integrator</h3>
+      <p>Enterprise API connecting Salesforce, Azure, and NetSuite with full CI/CD pipelines.</p>
+      <div class="ptags"><span class="ptag">Salesforce</span><span class="ptag">Node.js</span><span class="ptag">Azure</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Live</a></div>
+    </div>
+
+    <div class="pcard rev" style="transition-delay:.32s">
+      <p class="pn">05</p>
+      <h3>ML Pipeline Orchestrator</h3>
+      <p>End-to-end ML pipeline with model versioning, clean deployments, and Docker packaging.</p>
+      <div class="ptags"><span class="ptag">Docker</span><span class="ptag">MLflow</span><span class="ptag">Python</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Demo</a></div>
+    </div>
+
+    <div class="pcard rev" style="transition-delay:.4s">
+      <p class="pn">06</p>
+      <h3>Food &amp; Soil AI Detector</h3>
+      <p>Real-time computer vision for food detection and soil nutrient analysis using YOLO.</p>
+      <div class="ptags"><span class="ptag">OpenCV</span><span class="ptag">YOLO</span><span class="ptag">FastAPI</span></div>
+      <div class="plinks"><a href="#" class="plink gh">GitHub</a><a href="#" class="plink live">Demo</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PARADE ============ -->
+<section id="parade">
+  <div class="parade-track" id="paradeTrack"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="c-blob"></div>
+  <h2 class="rev">Let's Build Something<br>Together  ✦</h2>
+  <p class="rev">Open to roles, freelance work, and cool collaborations.</p>
+  <div class="c-links rev">
+    <a href="mailto:madulikaprabusankar@gmail.com" class="clink"><span class="ci">📧</span>Email Me</a>
+    <a href="https://www.linkedin.com/in/madulikaps" target="_blank" class="clink"><span class="ci">💼</span>LinkedIn</a>
+    <a href="https://github.com/madulika-prabu" target="_blank" class="clink"><span class="ci">🐙</span>GitHub</a>
+    <a href="https://medium.com/@madulikaprabusankar" target="_blank" class="clink"><span class="ci">✍️</span>Medium Blog</a>
+    <a href="https://wa.me/9345531330" target="_blank" class="clink"><span class="ci">💬</span>WhatsApp</a>
+  </div>
+</section>
+
+<footer>✦ Madulika &nbsp;·&nbsp; Full Stack AI Engineer &nbsp;·&nbsp; 2025</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

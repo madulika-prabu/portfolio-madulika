@@ -1,0 +1,66 @@
+<svg width="500" height="220" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Person 1 (left) -->
+  <ellipse cx="70" cy="80" rx="28" ry="30" fill="white" stroke="black" stroke-width="2.5"/>
+  <ellipse cx="70" cy="56" rx="18" ry="15" fill="black"/>
+  <ellipse cx="62" cy="80" rx="3.5" ry="4" fill="black"/>
+  <ellipse cx="78" cy="80" rx="3.5" ry="4" fill="black"/>
+  <path d="M62 92 Q70 98 78 92" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- mustache p1 -->
+  <path d="M60 87 Q70 92 80 87" stroke="black" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="42" y="108" width="56" height="90" rx="10" fill="white" stroke="black" stroke-width="2.5"/>
+  <path d="M42 118 Q20 130 24 160" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M42 118 Q20 130 24 160" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M98 118 Q120 130 116 160" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M98 118 Q120 130 116 160" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Person 2 (center-left) -->
+  <ellipse cx="185" cy="72" rx="30" ry="32" fill="white" stroke="black" stroke-width="2.5"/>
+  <!-- hair bow -->
+  <path d="M165 55 Q175 48 185 55 Q195 48 205 55" stroke="black" stroke-width="3" fill="none"/>
+  <circle cx="185" cy="48" r="5" fill="black"/>
+  <ellipse cx="177" cy="72" rx="3.5" ry="4" fill="black"/>
+  <ellipse cx="193" cy="72" rx="3.5" ry="4" fill="black"/>
+  <path d="M177 84 Q185 90 193 84" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M175 79 Q185 85 195 79" stroke="black" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="156" y="102" width="58" height="100" rx="10" fill="white" stroke="black" stroke-width="2.5"/>
+  <!-- V-neck -->
+  <path d="M175 102 L185 116 L195 102" stroke="black" stroke-width="2" fill="none"/>
+  <!-- controller in hands -->
+  <path d="M156 116 Q132 122 128 145" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M156 116 Q132 122 128 145" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M214 116 Q238 122 242 145" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M214 116 Q238 122 242 145" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <rect x="114" y="138" width="30" height="18" rx="5" fill="black" stroke="black" stroke-width="1"/>
+  <rect x="228" y="138" width="30" height="18" rx="5" fill="black" stroke="black" stroke-width="1"/>
+
+  <!-- Person 3 (center-right) -->
+  <ellipse cx="315" cy="78" rx="26" ry="28" fill="white" stroke="black" stroke-width="2.5"/>
+  <ellipse cx="315" cy="56" rx="17" ry="14" fill="black"/>
+  <ellipse cx="307" cy="78" rx="3.5" ry="4" fill="black"/>
+  <ellipse cx="323" cy="78" rx="3.5" ry="4" fill="black"/>
+  <path d="M307 90 Q315 96 323 90" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M307 85 Q315 90 323 85" stroke="black" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- shirt collar -->
+  <rect x="290" y="104" width="50" height="88" rx="9" fill="white" stroke="black" stroke-width="2.5"/>
+  <path d="M302 104 L315 115 L328 104" stroke="black" stroke-width="2" fill="none"/>
+  <!-- laptop -->
+  <path d="M340 120 Q360 128 356 155" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M340 120 Q360 128 356 155" stroke="black" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <rect x="340" y="148" width="44" height="30" rx="4" fill="black"/>
+  <rect x="343" y="151" width="38" height="24" rx="2" fill="#222"/>
+  <!-- laptop glow -->
+  <path d="M352 160 Q357 155 363 160" stroke="white" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Person 4 (right) -->
+  <ellipse cx="435" cy="76" rx="27" ry="29" fill="white" stroke="black" stroke-width="2.5"/>
+  <!-- long hair -->
+  <path d="M408 66 Q408 90 412 120" stroke="black" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M462 66 Q462 90 458 120" stroke="black" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <ellipse cx="435" cy="54" rx="20" ry="16" fill="black"/>
+  <ellipse cx="427" cy="76" rx="3.5" ry="4" fill="black"/>
+  <ellipse cx="443" cy="76" rx="3.5" ry="4" fill="black"/>
+  <path d="M427 88 Q435 94 443 88" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M427 83 Q435 88 443 83" stroke="black" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="408" y="104" width="54" height="90" rx="10" fill="black" stroke="black" stroke-width="2"/>
+  <path d="M408 118 Q385 130 388 158" stroke="black" stroke-width="12" stroke-linecap="round" fill="none"/>
+</svg>
