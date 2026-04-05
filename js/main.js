@@ -592,7 +592,7 @@ setExp(0);
   let carouselMode = false;
   let carIdx       = 0;
   let carRAF       = null;
-  const CCW = 300, CCH = 360;
+  const CCW = 300, CCH = 340;
   let carOffset    = 0;
   let carTargetOff = 0;
 
@@ -675,7 +675,7 @@ setExp(0);
     });
 
     // Dot indicators
-    const dotY = cy + CCH/2 + 38;
+    const dotY = cy + CCH/2 + 28;
     PROJECTS.forEach((_,i) => {
       ctx.beginPath();
       ctx.arc(cx + (i-(PROJECTS.length-1)/2)*22, dotY, i === carIdx ? 5.5 : 3.5, 0, Math.PI*2);
