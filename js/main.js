@@ -144,7 +144,21 @@ const ED = [
 //   }
 // }
 function setExp(i) {
+  const isMobile = window.innerWidth <= 1024;
   document.querySelectorAll('.ec').forEach((c, j) => c.classList.toggle('on', j === i));
+
+  if (isMobile) {
+    // Expand inline detail inside the clicked card
+    document.querySelectorAll('.ec').forEach((c, j) => {
+      const detail = c.querySelector('.ec-mobile-detail');
+      if (!detail) return;
+      detail.style.display = (j === i) ? 'block' : 'none';
+    });
+    return; // never touch the desktop popup on mobile
+  }
+
+  if (i < 0) return;
+
   const popup    = document.getElementById('expPopup');
   const expRight = document.querySelector('.exp-right');
   const canvas   = document.getElementById('expCanvas');
@@ -162,13 +176,40 @@ function setExp(i) {
   if (popup) {
     popup.classList.remove('active');
     if (expRight) expRight.classList.add('popup-open');
-    if (canvas)   canvas.classList.add('faded');      /* ADD THIS — hides lines + icons */
+    if (canvas)   canvas.classList.add('faded');
     requestAnimationFrame(() => requestAnimationFrame(() => popup.classList.add('active')));
   }
 }
+/* ── EXPERIENCE INIT ── */
+// Inject mobile inline detail into each .ec card
 document.querySelectorAll('.ec').forEach((c, i) => {
-  c.addEventListener('click',      () => setExp(i));
-  c.addEventListener('mouseenter', () => setExp(i));
+  const d = ED[i];
+  const detail = document.createElement('div');
+  detail.className = 'ec-mobile-detail';
+  detail.style.display = 'none';
+  detail.innerHTML = `
+    <ul>${d.b.map(b => `<li>${b}</li>`).join('')}</ul>
+    <div class="techs">${d.tech.map(t => `<span class="tpill">${t}</span>`).join('')}</div>
+  `;
+  c.appendChild(detail);
+});
+setExp(0);
+
+document.querySelectorAll('.ec').forEach((c, i) => {
+  c.addEventListener('click', () => {
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
+      // Toggle: if already open, close it; else open it
+      const isOpen = c.classList.contains('on');
+      setExp(isOpen ? -1 : i);
+    } else {
+      setExp(i);
+    }
+  });
+  // Hover only on desktop
+  c.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 1024) setExp(i);
+  });
 });
 // document.getElementById('experience')?.addEventListener('mouseleave', () => {
 //   document.getElementById('expPopup')?.classList.remove('active');
@@ -270,6 +311,19 @@ window.addEventListener('resize', drawTechLines);
 })();
 
 /* ── EXPERIENCE INIT ── */
+// Inject mobile inline detail into each .ec card
+document.querySelectorAll('.ec').forEach((c, i) => {
+  const d = ED[i];
+  const detail = document.createElement('div');
+  detail.className = 'ec-mobile-detail';
+  // Always start hidden via inline style — CSS handles mobile show/hide via .on
+  detail.style.display = 'none';
+  detail.innerHTML = `
+    <ul>${d.b.map(b => `<li>${b}</li>`).join('')}</ul>
+    <div class="techs">${d.tech.map(t => `<span class="tpill">${t}</span>`).join('')}</div>
+  `;
+  c.appendChild(detail);
+});
 setExp(0);
 
 /* ── PROJECTS ORBITAL ── */
@@ -470,7 +524,11 @@ setExp(0);
     hoveredCard = found;
     canvas.style.cursor = found ? 'pointer' : 'grab';
   });
-  canvas.addEventListener('mouseleave', () => { hoveredCard = null; });
+  canvas.addEventListener('mouseleave', e => {
+    // Don't reset if the mouse moved to the toggle button (avoids flickering)
+    if (e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.view-toggle-btn, .car-nav-btn, .car-nav-wrap')) return;
+    hoveredCard = null;
+  });
 
   /* Project popup */
   const overlay  = document.getElementById('overlay');
