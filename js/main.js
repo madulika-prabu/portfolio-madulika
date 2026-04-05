@@ -55,11 +55,15 @@ drawerOverlay.addEventListener('click', closeDrawer);
 window.closeDrawer = closeDrawer;
 
 /* ── THEME TOGGLE ── */
-document.getElementById('thBtn').addEventListener('click', function() {
+function toggleTheme() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  this.textContent = isDark ? '🌙' : '☀️';
-});
+  const icon = isDark ? '🌙' : '☀️';
+  document.querySelectorAll('.theme-btn').forEach(b => b.textContent = icon);
+}
+document.getElementById('thBtn').addEventListener('click', toggleTheme);
+const _tmob = document.getElementById('thBtnMob'); if(_tmob) _tmob.addEventListener('click', toggleTheme);
+const _tdrw = document.getElementById('thBtnDrawer'); if(_tdrw) _tdrw.addEventListener('click', toggleTheme);
 
 /* ── PARALLAX BLOB ── */
 const arc = document.getElementById('heroArc');

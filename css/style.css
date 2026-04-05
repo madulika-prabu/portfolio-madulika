@@ -120,6 +120,33 @@ nav.scrolled {
   margin-left: 10px;
 }
 .theme-btn:hover { transform: rotate(20deg) scale(1.1); }
+/* ── MOB NAV RIGHT (theme + hamburger) ── */
+.mob-right { display: none; align-items: center; gap: 8px; }
+.theme-btn-mob { display: none; }
+
+/* ── DRAWER EXTRAS ── */
+.drawer-dl {
+  font-size: 16px; font-weight: 700;
+  color: #a78bfa; padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  width: 100%; display: block; margin-top: 4px;
+}
+.theme-btn-drawer {
+  margin-top: 24px; width: 48px; height: 48px; font-size: 20px;
+}
+
+/* ── DOWNLOAD RESUME BUTTON ── */
+.btn-dl {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: #fff; padding: 12px 24px;
+  border-radius: 50px; font-size: 15px; font-weight: 600;
+  transition: background 0.25s, transform 0.2s;
+  white-space: nowrap;
+}
+.btn-dl:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+
 
 /* Hamburger (mobile) */
 .hamburger {
@@ -139,7 +166,7 @@ nav.scrolled {
 
 /* Mobile drawer */
 .mobile-drawer {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0; right: 0; bottom: 0;
   width: min(300px, 85vw);
@@ -152,11 +179,15 @@ nav.scrolled {
   padding: 90px 36px 40px;
   gap: 0;
   transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  visibility: hidden;
+  transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0s linear 0.4s;
   border-left: 1px solid rgba(255,255,255,0.08);
+  overflow-y: auto;
 }
 .mobile-drawer.open {
   transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), visibility 0s linear 0s;
 }
 .mobile-drawer a {
   font-size: 22px; font-weight: 700;
@@ -947,8 +978,10 @@ footer {
    RESPONSIVE — MOBILE  (max 768px)
 ───────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* Nav: hide desktop links, show hamburger */
+  /* Nav: hide desktop links, show mob-right */
   .nav-links { display: none; }
+  .mob-right { display: flex; }
+  .theme-btn-mob { display: flex; }
   .hamburger { display: flex; }
 
   /* Hero: stack vertically */
@@ -1031,16 +1064,16 @@ footer {
 }
 .view-toggle-btn {
   position: absolute;
-  bottom: 90px;
+  top: 10px;
+  bottom: unset;
   left: 50%;
   transform: translateX(-50%);
-  top: unset;
   background: rgba(20, 14, 50, 0.85);
   border: 1.5px solid rgba(255,255,255,0.35);
   color: #fff;
-  padding: 10px 22px;
+  padding: 8px 18px;
   border-radius: 30px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   transition: background .25s, transform .2s;
   white-space: nowrap;
@@ -1061,9 +1094,16 @@ footer {
   .char-card img.avatar { height: 240px; }
   .hero-txt h1 { font-size: 20px; }
   .hero-txt h1 .cursive { font-size: 30px; }
-  .si { display: none; } /* hide floating social on very small screens */
-  .sicons { display: none; }
-  /* Show them below card instead via a static row if you like */
+  /* Social icons: static row below card */
+  .sicons {
+    position: static; display: flex; flex-direction: row;
+    justify-content: center; gap: 8px; margin-top: 10px;
+    overflow: visible; pointer-events: all;
+  }
+  .si { position: static; width: 42px; height: 42px; animation: none; }
+  .si img { width: 38px; height: 38px; }
+  .si-md img { width: 32px; height: 32px; }
+  .char-card { overflow: visible; height: auto; padding-bottom: 10px; }
   .about-hobbies-grid { grid-template-columns: 1fr 1fr; }
   .c-links { flex-direction: column; align-items: stretch; }
   .clink { justify-content: center; }
